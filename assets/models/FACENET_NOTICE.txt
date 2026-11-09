@@ -1,0 +1,8 @@
+CamMask bundled FaceNet model
+
+Model artifact distributed by Shubham Panchal's FaceRecognition_With_FaceNet_Android project,
+commit 289bc10420aad15fed99094eee364eb24f908ecc, under the distribution repository's Apache 2.0 license.
+Credit to Shubham Panchal and upstream FaceNet contributors (including David Sandberg).
+Only the pretrained model artifact is imported; CamMask application implementation is original.
+See docs/DEPENDENCIES.md in the source repository for provenance and training-data limitations.
+This consented demonstration makes no biometric accuracy or commercial suitability claim.

@@ -1,25 +1,32 @@
 {
   "expo": {
-    "name": "paypal-hack",
-    "slug": "paypal-hack",
+    "name": "NearPay",
+    "slug": "nearpay-local",
     "version": "1.0.0",
+    "scheme": "nearpay",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
+    "platforms": ["android"],
+    "newArchEnabled": true,
     "ios": {
       "supportsTablet": true
     },
     "android": {
-      "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
-      },
-      "predictiveBackGestureEnabled": false
+      "package": "com.codex.nearpay",
+      "allowBackup": false,
+      "predictiveBackGestureEnabled": true,
+      "permissions": ["android.permission.CAMERA"]
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-router",
+      ["expo-camera", { "cameraPermission": "NearPay uses your camera to identify a nearby recipient on this device.", "recordAudioAndroid": false, "barcodeScannerEnabled": false }],
+      ["expo-secure-store", { "configureAndroidBackup": true }],
+      "react-native-fast-tflite"
+    ],
+    "experiments": { "typedRoutes": true }
   }
 }
